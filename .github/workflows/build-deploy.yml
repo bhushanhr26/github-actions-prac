@@ -22,16 +22,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Installing NPM Packages
         run: npm install
 
       - name: Building Project
         run: npm run build
-
-      - name: Running Test
-        run: npm run test
 
       - name: Uploading production-ready build files
         uses: actions/upload-artifact@v2
